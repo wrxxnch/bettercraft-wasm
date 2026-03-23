@@ -465,7 +465,6 @@ class MinetestArgs {
     }
 }
 
-const args = new MinetestArgs();
 args.gameid = "bettercraft";
 
 class MinetestLauncher {
