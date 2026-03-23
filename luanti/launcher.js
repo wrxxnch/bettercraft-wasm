@@ -694,6 +694,9 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const launcher = new MinetestLauncher();
 
+        const args = new MinetestArgs();
+        args.gameid = "bettercraft";
+
         launcher.onready = () => {
             launcher.launch(args);
         };
