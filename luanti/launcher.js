@@ -465,8 +465,6 @@ class MinetestArgs {
     }
 }
 
-args.gameid = "bettercraft";
-
 class MinetestLauncher {
     constructor() {
         if (mtLauncher !== null) {
@@ -686,9 +684,6 @@ if (document.readyState === 'loading') {
         console.error('Erro ao inicializar launcher:', err);
     }
 }
-
-const args = new MinetestArgs();
-args.gameid = "bettercraft";
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
