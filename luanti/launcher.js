@@ -662,19 +662,6 @@ class MinetestLauncher {
 window.MinetestArgs = MinetestArgs;
 window.MinetestLauncher = MinetestLauncher;
 
-// Inicializar o launcher quando este script for carregado
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        new MinetestLauncher();
-        if (window.onLauncherReady) {
-            window.onLauncherReady();
-        }
-    } catch (err) {
-        console.error('Erro ao inicializar launcher:', err);
-    }
-});
-
-// Se o DOM já foi carregado, inicializar imediatamente
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         try {
