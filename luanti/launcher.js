@@ -465,6 +465,9 @@ class MinetestArgs {
     }
 }
 
+const args = new MinetestArgs();
+args.gameid = "bettercraft";
+
 class MinetestLauncher {
     constructor() {
         if (mtLauncher !== null) {
@@ -660,6 +663,7 @@ class MinetestLauncher {
 
 // Exportar para o escopo global
 window.MinetestArgs = MinetestArgs;
+
 window.MinetestLauncher = MinetestLauncher;
 
 if (document.readyState === 'loading') {
