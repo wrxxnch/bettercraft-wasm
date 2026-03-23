@@ -688,9 +688,18 @@ if (document.readyState === 'loading') {
     }
 }
 
-window.onLauncherReady = () => {
-    const args = new MinetestArgs();
-    args.gameid = "bettercraft";
+const args = new MinetestArgs();
+args.gameid = "bettercraft";
 
-    mtLauncher.launch(args);
-};
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const launcher = new MinetestLauncher();
+
+        launcher.onready = () => {
+            launcher.launch(args);
+        };
+
+    } catch (err) {
+        console.error('Erro ao inicializar launcher:', err);
+    }
+});
