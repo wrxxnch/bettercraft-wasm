@@ -690,7 +690,7 @@ if (document.readyState === 'loading') {
 
 window.onLauncherReady = () => {
     const args = new MinetestArgs();
-    args.gameid = "bettercraft";   // nome do arquivo bettercraft.pack
+    args.gameid = "bettercraft";
 
-    window.launcher.launch(args);
+    mtLauncher.launch(args);
 };
