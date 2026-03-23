@@ -687,3 +687,10 @@ if (document.readyState === 'loading') {
         console.error('Erro ao inicializar launcher:', err);
     }
 }
+
+window.onLauncherReady = () => {
+    const args = new MinetestArgs();
+    args.gameid = "bettercraft";   // nome do arquivo bettercraft.pack
+
+    window.launcher.launch(args);
+};
